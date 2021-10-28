@@ -6,89 +6,54 @@
   },
   "data": {
     "projects": [
-{
-        "name": "headless.cannabis.ca.gov",
-        "description": "",
+      {
+        "name": "drought.ca.gov",
+        "description": "Drought production website",
         "enabled": true,
         "enabledLocal": false,
         "ReportingChannel_Slack": "C02G6PETB9B",
         "WordPressSource": {
-          "url": "https://cannabis.ca.gov",
-          "tags_exclude": []
+          "url": "https://live-drought-ca-gov.pantheonsite.io",
+          "tags_exclude": ["staging", "development"]
         },
         "GitHubTarget": {
           "Owner": "cagov",
-          "Repo": "cannabis.ca.gov",
+          "Repo": "drought.ca.gov",
           "Branch": "main",
-          "ConfigPath": "wordpress/config/wordpress-to-github.config.json"
+          "ConfigPath": "wordpress/wordpress-to-github.config.json"
         }
       },
       {
-        "name": "staging.cannabis.ca.gov",
-        "description": "",
+        "name": "staging.drought.ca.gov",
+        "description": "Drought STAGING website",
         "enabled": true,
         "enabledLocal": false,
         "ReportingChannel_Slack": "C02G6PETB9B",
         "WordPressSource": {
-          "url": "https://cannabis.ca.gov",
-          "tags_exclude": []
+          "url": "https://live-drought-ca-gov.pantheonsite.io",
+          "tags_exclude": ["development"]
         },
         "GitHubTarget": {
           "Owner": "cagov",
-          "Repo": "cannabis.ca.gov",
+          "Repo": "drought.ca.gov",
           "Branch": "staging",
-          "ConfigPath": "wordpress/config/wordpress-to-github.config.json"
+          "ConfigPath": "wordpress/wordpress-to-github.config.json"
         }
       },
       {
-        "name": "development.cannabis.ca.gov",
-        "description": "",
+        "name": "main-test-pantheon.drought.ca.gov",
         "enabled": true,
         "enabledLocal": false,
         "ReportingChannel_Slack": "C02G6PETB9B",
         "WordPressSource": {
-          "url": "https://cannabis.ca.gov",
-          "tags_exclude": []
+          "url": "https://test-drought-ca-gov.pantheonsite.io",
+          "tags_exclude": ["staging", "development"]
         },
         "GitHubTarget": {
           "Owner": "cagov",
-          "Repo": "cannabis.ca.gov",
-          "Branch": "development",
-          "ConfigPath": "wordpress/config/wordpress-to-github.config.json"
-        }
-      },
-      {
-        "name": "staging-pantheon.cannabis.ca.gov",
-        "description": "",
-        "enabled": true,
-        "enabledLocal": false,
-        "ReportingChannel_Slack": "C02G6PETB9B",
-        "WordPressSource": {
-          "url": "https://live-cagov-dcc.pantheonsite.io",
-          "tags_exclude": []
-        },
-        "GitHubTarget": {
-          "Owner": "cagov",
-          "Repo": "cannabis.ca.gov",
-          "Branch": "staging-pantheon",
-          "ConfigPath": "wordpress/config/wordpress-to-github.config.json"
-        }
-      },
-      {
-        "name": "development-pantheon.cannabis.ca.gov",
-        "description": "",
-        "enabled": true,
-        "enabledLocal": false,
-        "ReportingChannel_Slack": "C02G6PETB9B",
-        "WordPressSource": {
-          "url": "https://dev-cagov-dcc.pantheonsite.io",
-          "tags_exclude": []
-        },
-        "GitHubTarget": {
-          "Owner": "cagov",
-          "Repo": "cannabis.ca.gov",
-          "Branch": "development-pantheon",
-          "ConfigPath": "wordpress/config/wordpress-to-github.config.json"
+          "Repo": "drought.ca.gov",
+          "Branch": "main-test-pantheon",
+          "ConfigPath": "wordpress/wordpress-to-github.config.json"
         }
       }
     ]
