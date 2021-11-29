@@ -17,6 +17,6 @@
     "prettier": "^2.4.1"
   },
   "dependencies": {
-    "@cagov/wordpress-to-github": "^0.0.1"
+    "@cagov/wordpress-to-github": "^0.1.0"
   }
 }
