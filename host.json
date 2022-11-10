@@ -5,7 +5,7 @@
     "http": {
       "routePrefix": "",
       "maxOutstandingRequests": 200,
-      "maxConcurrentRequests": 100,
+      "maxConcurrentRequests": 25,
       "dynamicThrottlesEnabled": true
     }
   }
