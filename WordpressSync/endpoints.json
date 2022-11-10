@@ -10,7 +10,7 @@
         "name": "drought.ca.gov",
         "description": "Drought production website",
         "enabled": true,
-        "enabledLocal": true,
+        "enabledLocal": false,
         "ReportingChannel_Slack": "C02G6PETB9B",
         "WordPressSource": {
           "url": "https://live-drought-ca-gov.pantheonsite.io",
@@ -27,7 +27,7 @@
         "name": "staging.drought.ca.gov",
         "description": "Drought STAGING website",
         "enabled": true,
-        "enabledLocal": true,
+        "enabledLocal": false,
         "ReportingChannel_Slack": "C02G6PETB9B",
         "WordPressSource": {
           "url": "https://live-drought-ca-gov.pantheonsite.io",
