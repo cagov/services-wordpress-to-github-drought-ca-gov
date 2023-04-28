@@ -1,20 +1,10 @@
-// @ts-check
 const { SyncEndpoint } = require("@cagov/wordpress-to-github");
-const {
-  GitHubCommitter,
-  GitHubCredentials,
-  SourceEndpointConfigData
-} = require("@cagov/wordpress-to-github/common");
 const {
   slackBotReportError,
   slackBotChatPost,
   slackBotReplyPost
-} = require("../common/slackBot");
-const debugChannel = "C01DBP67MSQ"; // #testingbot
-//const debugChannel = 'C01H6RB99E2'; //Carter debug
-const endPointsJson = require("./endpoints.json");
-/** @type {SourceEndpointConfigData[]} */
-const endpoints = endPointsJson.data.projects;
+} = require("./slackBot/index.js");
+
 /** @type {GitHubCommitter} **/
 const gitHubCommitter = {
   name: `${process.env["GITHUB_NAME"]}`,
@@ -25,47 +15,17 @@ const gitHubCredentials = {
   token: `${process.env["GITHUB_TOKEN"]}`
 };
 
-/**
- *
- * @param {{executionContext:{functionName:string}}} context
- * @param {*} [myTimer]
- * @param {string[]} [activeEndpoints] list of endpoints to run
- */
-module.exports = async function (context, myTimer, activeEndpoints) {
-  const endpointsFiltered = [...endpoints].filter(
-    x => !activeEndpoints?.length || activeEndpoints.includes(x.name)
-  );
-
-  const appName = context.executionContext.functionName;
-  const debugMode = process.env.debug?.toLowerCase() === "true";
-
-  const work = endpointsFiltered.filter(
-    x => (debugMode && x.enabledLocal) || (!debugMode && x.enabled)
-  );
-
-  if (debugMode) {
-    await doProcessEndpoints(work);
-    return;
-  }
-
-  try {
-    await doProcessEndpoints(work);
-  } catch (e) {
-    await slackBotReportError(
-      debugChannel,
-      `Error running ${appName}`,
-      e,
-      context,
-      myTimer
-    );
-  }
-};
+const {
+  GitHubCommitter,
+  GitHubCredentials,
+  SourceEndpointConfigData
+} = require("@cagov/wordpress-to-github/common");
 
 /**
  *
  * @param {SourceEndpointConfigData[]} work
  */
-const doProcessEndpoints = async work => {
+module.exports = async function doProcessEndpoints(work) {
   if (work.length) {
     console.log(`Using ${work.length} endpoint(s)`);
   } else {

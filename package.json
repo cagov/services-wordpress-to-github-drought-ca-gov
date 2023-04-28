@@ -1,17 +1,20 @@
 {
   "name": "cagov-wordpress-to-github-development",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/cagov/wordpress-to-github.git"
   },
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "npx arc sandbox"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@architect/architect": "^10.11.2",
     "eslint": "^7.32.0",
     "eslint-plugin-jsdoc": "^36.1.0",
     "prettier": "^2.4.1"
