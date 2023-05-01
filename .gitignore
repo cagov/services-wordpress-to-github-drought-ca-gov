@@ -101,5 +101,5 @@ local.settings.json
 
 # AWS architect files
 sam.json
-sam.yml
+sam.yaml
 preferences.arc
