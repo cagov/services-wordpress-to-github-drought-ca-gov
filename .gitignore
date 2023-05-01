@@ -97,3 +97,9 @@ obj
 appsettings.json
 local.settings.json
 .DS_Store
+
+
+# AWS architect files
+sam.json
+sam.yaml
+preferences.arc
