@@ -1,5 +1,8 @@
 .DS_Store
 
+# local setup script
+local_env_setup.sh
+
 # Logs
 logs
 *.log
