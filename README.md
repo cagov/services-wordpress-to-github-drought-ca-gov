@@ -1,5 +1,7 @@
 # wordpress-to-github implementation for drought.ca.gov
 
+NOTE: This service was shut down on Nov-27-2023, as the ODI-hosted drought website is no longer being served.
+
 This is the [wordpress-to-github](https://www.npmjs.com/package/@cagov/wordpress-to-github) implementation for [drought.ca.gov](https://drought.ca.gov).
 
 ## Deploys services to the following AWS Function
